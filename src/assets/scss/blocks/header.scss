@@ -1,0 +1,134 @@
+.header {
+    max-width: 1680px;
+    height: 88px;
+    background: $white;
+    display: flex;
+    align-items: center;
+    margin: 56px auto 0;
+    box-shadow: 0px 6px 7px rgba(16, 24, 40, 0.05);
+    border-radius: 4px;
+    font-size: 20px;
+    line-height: 32px;
+    color: $black;
+
+    @include breakpoint($desktop-m) {
+        max-width: 1320px;
+        height: 80px;
+    }
+
+    @include breakpoint($desktop-s) {
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    @include breakpoint($tablet) {
+        height: 72px;
+    }
+
+    @include breakpoint($mobile) {
+        height: 56px;
+        padding: 0 20px;
+    }
+}
+
+.header__logo {
+    display: block;
+    width: 172px;
+    height: 32px;
+    background: url("../images/header-logo.svg");
+    margin: 0 85px 0 98px;
+    
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 405px;
+}
+
+.header__link {
+    font-family: "Roboto", sans-serif;
+    color: $black;
+    text-decoration: none;
+    margin-right: 40px;
+    position: relative;
+    display: block;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    &:hover,
+    &:active {
+        color: $light-blue;
+    }
+
+    // Надо разобраться с состояниями по макету
+}
+
+.header__theme {
+    width: 379px;
+    height: 100%;
+    border-left: 1px solid $light-grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__switch {
+    display: inline-block;
+    position: relative;
+    width: 48px;
+    height: 24px;
+    margin: 0 16px;
+
+}
+
+.header__tumbler {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $light-blue;
+    box-shadow: inset 0px 2px 5px rgba(16, 24, 40, 0.09);
+    border-radius: 30px;
+    transition: background-color .2s linear;
+
+    &:before {
+        position: absolute;
+        content: '';
+        height: 20px;
+        width: 20px;
+        top: 1px;
+        right: 2px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform .2s linear;
+    }
+
+    &:hover,
+    &:active {
+        background: $green;
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    .header__input:checked + & {
+        background: $dark-grey;
+
+        &:before {
+            transform: translateX(-24px);
+        }
+    }
+}
