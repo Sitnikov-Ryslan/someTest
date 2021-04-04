@@ -4,9 +4,10 @@
 body {
     font-size: 32px;
     line-height: 40px;
-    color: #000;
+    color: $black;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    margin: 0;
 }
 
 *,
@@ -15,5 +16,27 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    font-size: inherit;
+}
+
+@import "blocks/page.scss";
 @import "blocks/container.scss";
 @import "blocks/header.scss";
+@import "blocks/intro.scss";
+@import "blocks/feature.scss";
+@import "blocks/pictures.scss";
+@import "blocks/tabs.scss";

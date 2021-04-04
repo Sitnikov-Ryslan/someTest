@@ -1,0 +1,137 @@
+.tabs {
+    width: 100%;
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.tabs__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 560px;
+    height: 48px;
+}
+
+.tabs__item {
+    margin-right: 15px;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.tabs__btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: $light-blue;
+    padding: 10px 30px;
+    background: $white;
+    border: 1px solid $grey;
+    border-radius: 30px;
+    cursor: pointer;
+
+    &:hover {
+        color: $light-black;
+    }
+
+    &:active {
+        color: $black;
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    &.active {
+        color: $light-blue;
+        background: $light-grey;
+    }
+}
+
+.tabs__form {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+
+.tabs__select_title {
+    width: 100%;
+    height: 48px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: $light-blue;
+    padding: 10px 51px 10px 30px;
+    background: url('../images/select-arrow.svg') no-repeat 90% center, $white;
+    border: 1px solid $grey;
+    border-radius: 30px;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        background: url('../images/select-arrow-black.svg') no-repeat 90% center, $white;
+    }
+
+    &:hover {
+        color: $light-black;
+    }
+
+    &:active {
+        color: $black;
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+}
+
+.tabs__option {
+    width: 264px;
+    height: 40px;
+    display: block;
+    border: 0;
+    padding: 8px 32px;
+    background: $white;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: $light-blue;
+    box-shadow: 0px 6px 7px rgba(16, 24, 40, 0.05);
+    margin-bottom: 1px;
+    cursor: pointer;
+
+    & input {
+        display: none;
+    }
+
+    &:hover,
+    &.active {
+        background: $light-grey;
+    }
+}
+
+.tabs__submit {
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background: url('../images/sort-arrow.svg') no-repeat center center, $green;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+        background: url('../images/sort-arrow.svg') no-repeat center center, $light-blue;
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    &.active {
+        background: url('../images/sort-arrow-active.svg') no-repeat center center, $green;
+    }
+}

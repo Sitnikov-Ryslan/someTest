@@ -1,0 +1,50 @@
+.intro {
+    position: relative;
+    width: 100%;
+    min-height: 937px;
+    background: url('../images/intro-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: $white;
+}
+
+.intro__title {
+    max-width: 100%;
+    font-size: 64px;
+    line-height: 72px;
+    margin: 392px 0 20px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.intro__text {
+    max-width: 100%;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 76px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.intro__link {
+    width: 288px;
+    height: 56px;
+    display: block;
+    background: $gradient;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 16px 41px;
+
+    &:hover,
+    &:active {
+        background: $light-blue;
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+}
