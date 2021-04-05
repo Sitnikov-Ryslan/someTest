@@ -3,3 +3,163 @@
     padding: 40px 0 111px;
     background: $white;
 }
+
+.pictures__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.pictures__item {
+    width: 49%;
+    max-width: 736px;
+    margin-bottom: 32px;
+
+    &:nth-child(5n+3) {
+        width: 100%;
+        max-width: 1504px;
+    }
+}
+
+.pictures__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 472px;
+    background: url('../images/picture.jpg') no-repeat center center, $white;
+    background-size: cover;
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    &:hover .pictures__content {
+        opacity: 1;
+    }
+}
+
+.pictures__content {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    padding: 32px 20px 32px 32px;
+    color: $white;
+    opacity: 0;
+    transition: opacity .1s linear;
+}
+
+.pictures__description {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pictures__author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.pictures__avatar {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: $white;
+    background-size: cover;
+    margin-right: 8px;
+}
+
+.pictures__name {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pictures__title {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pictures__like {
+    max-width: 20%;
+    min-width: auto;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    bottom: 24px;
+}
+
+.pictures__like_btn {
+    display: block;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    background: url('../images/like.svg') no-repeat center center, $white;
+    padding: 0;
+    border: 0;
+    margin: 0 8px 0 0;
+    cursor: pointer;
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    &:hover {
+        background: url('../images/like-hover.svg') no-repeat center center, $white;
+    }
+
+    &:active {
+        background: url('../images/like-active.svg') no-repeat center center, $white;
+    }
+}
+
+.pictures__like_counter {
+    max-width: 95px;
+    font-size: 16px;
+    line-height: 24px;
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pictures__btn {
+    display: block;
+    width: 224px;
+    height: 56px;
+    font-family: 'Roboto, sans-serif';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: $green;
+    margin: 0 auto;
+    background: $light-grey;
+    border: 0;
+    cursor: pointer;
+    padding: 16px 48px;
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    &:hover,
+    &:active {
+        color: $light-blue;
+    }
+}

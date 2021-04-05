@@ -33,21 +33,23 @@
     border-radius: 30px;
     cursor: pointer;
 
+    &.active {
+        color: $light-blue;
+        background: $light-grey;
+    }
+
     &:hover {
         color: $light-black;
+        background: $white;
     }
 
     &:active {
         color: $black;
+        background: $white;
     }
 
     &:focus {
         outline: 1px solid $yellow;
-    }
-
-    &.active {
-        color: $light-blue;
-        background: $light-grey;
     }
 }
 
@@ -103,6 +105,7 @@
     box-shadow: 0px 6px 7px rgba(16, 24, 40, 0.05);
     margin-bottom: 1px;
     cursor: pointer;
+    display: none;
 
     & input {
         display: none;
@@ -111,6 +114,10 @@
     &:hover,
     &.active {
         background: $light-grey;
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
     }
 }
 
@@ -123,15 +130,15 @@
     padding: 0;
     cursor: pointer;
 
+    &.active {
+        background: url('../images/sort-arrow-active.svg') no-repeat center center, $green;
+    }
+
     &:hover {
         background: url('../images/sort-arrow.svg') no-repeat center center, $light-blue;
     }
 
     &:focus {
         outline: 1px solid $yellow;
-    }
-
-    &.active {
-        background: url('../images/sort-arrow-active.svg') no-repeat center center, $green;
     }
 }

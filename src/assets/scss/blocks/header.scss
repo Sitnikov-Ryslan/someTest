@@ -67,15 +67,6 @@
         margin-right: 0;
     }
 
-    &:focus {
-        outline: 1px solid $yellow;
-    }
-
-    &:hover,
-    &:active {
-        color: $light-blue;
-    }
-
     &.active {
         color: $black;
 
@@ -89,6 +80,15 @@
             top: 115%;
             left: 0;
         }
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    &:hover,
+    &:active {
+        color: $light-blue;
     }
 }
 
@@ -108,6 +108,9 @@
     height: 24px;
     margin: 0 16px;
 
+    &:focus {
+        outline: 1px solid $yellow;
+    }
 }
 
 .header__tumbler {
@@ -139,15 +142,20 @@
         background: $green;
     }
 
-    &:focus {
-        outline: 1px solid $yellow;
-    }
+    // &:focus {
+    //     outline: 1px solid $yellow;
+    // }
 
     .header__input:checked + & {
         background: $dark-grey;
 
         &:before {
             transform: translateX(-24px);
+        }
+
+        &:hover,
+        &:active {
+            background: $green;
         }
     }
 }
