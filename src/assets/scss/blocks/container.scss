@@ -18,6 +18,21 @@
         position: relative;
     }
 
+    .new & {
+        max-width: 837px;
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .subscribe & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 0 80px;
+    }
+
     @include breakpoint($desktop-m) {
         max-width: 1200px;
     }

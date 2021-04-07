@@ -1,0 +1,55 @@
+.new {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(89.82deg, #2F9BFF 0.12%, #2ACCA3 79.92%);
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 27%;
+        max-width: 480px;
+        height: inherit;
+    }
+
+    &:before {
+        left: 0;
+        background: url('../images/new-before.png') no-repeat center center;
+    }
+
+    &:after {
+        right: 0;
+        background: url('../images/new-after.png') no-repeat center center;
+    }
+}
+
+.new__title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 36px;
+    color: $blue;
+}
+
+.new__link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+    width: 244px;
+    height: 56px;
+    background: $yellow;
+    border-radius: 100px;
+    padding: 16px 28px;
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    &:hover,
+    &:active {
+        background: $blue;
+    }
+}

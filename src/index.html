@@ -274,20 +274,27 @@ title: someTest
 </div>
 
 <section class="new">
-    <div class="new__content">
+    <div class="container">
         <h1 class="new__title">Весенняя коллекция новых изображений!</h1>
-        <a href="" class="new__link">Смотреть коллекции</a>
+        <a href="#" class="new__link">Смотреть коллекции</a>
     </div>
 </section>
 
 <form action="" class="subscribe" method="POST">
-    <h1 class="subscribe__title">Присоединяйся к нам!</h1>
-    <p class="subscribe__text">Подписывайся на новые коллекции изображений!</p>
-    <label for="" class="subscribe__label">
-        <input type="email" name="email" placeholder="Подписаться">
-        <span></span>
-    </label>
-    <button type="submit">
-        <span class="visually-hidden">Subscribe</span>
-    </button>
+    <div class="container">
+        <h1 class="subscribe__title">Присоединяйся к нам!</h1>
+        <p class="subscribe__text">Подписывайся на новые коллекции изображений!</p>
+        <div class="subscribe__btns">
+            <label class="subscribe__label">
+                <p style="display:none">Проверьте название почты!</p>
+                <input type="email" name="email" class="subscribe__input" maxlength="50">
+                <span>Подписаться</span>
+                <span>Введите e-mail</span>
+                <span>E-mail</span>
+            </label>
+            <button type="submit" class="subscribe__submit">
+                <span class="visually-hidden">Subscribe</span>
+            </button>
+        </div>
+    </div>
 </form>
