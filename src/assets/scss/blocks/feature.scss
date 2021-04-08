@@ -2,6 +2,18 @@
     width: 100%;
     background: $white;
     padding-top: 95px;
+
+    @include breakpoint($desktop-m) {
+        padding-top: 81px;
+    }
+
+    @include breakpoint($desktop-s) {
+        padding-top: 56px;
+    }
+
+    @include breakpoint($tablet) {
+        padding-top: 48px;
+    }
 }
 
 .feature__list {
@@ -10,6 +22,22 @@
     font-size: 24px;
     line-height: 36px;
     margin-bottom: 72px;
+
+    @include breakpoint($desktop-m) {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 42px;
+    }
+
+    @include breakpoint($desktop-s) {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 48px;
+    }
+
+    @include breakpoint($tablet) {
+        margin-bottom: 40px;
+    }
 }
 
 .feature__item {
@@ -21,17 +49,64 @@
 
     &:first-child {
         background: url('../images/feature-1.svg') no-repeat left center;
+
+        @include breakpoint($desktop-s) {
+            background-position: center top;
+        }
+
+        @include breakpoint($tablet) {
+            background-size: 64px 64px;
+        }
     }
 
     &:nth-child(2) {
         width: 31%;
         background: url('../images/feature-2.svg') no-repeat left center;
+
+        @include breakpoint($desktop-s) {
+            background-position: center top;
+        }
+
+        @include breakpoint($tablet) {
+            background-size: 64px 64px;
+        }
     }
 
     &:last-child {
         width: 29%;
         padding-right: 55px;
         background: url('../images/feature-3.svg') no-repeat left center;
+
+        @include breakpoint($desktop-m) {
+            padding-right: 15px;
+        }
+
+        @include breakpoint($desktop-s) {
+            padding-right: 0;
+            background-position: center top;
+        }
+
+        @include breakpoint($tablet) {
+            background-size: 64px 64px;
+        }
+    }
+
+    @include breakpoint($desktop-m) {
+        width: 33%;
+    }
+
+    @include breakpoint($desktop-s) {
+        flex-direction: column;
+        padding-left: 0;
+        padding-top: 94px;
+        height: 142px;
+        width: 32%;
+        text-align: center;
+    }
+
+    @include breakpoint($tablet) {
+        padding-top: 74px;
+        height: 146px;
     }
 }
 
@@ -44,4 +119,20 @@
     color: $dark-grey;
     margin: 0 auto;
     text-align: center;
+
+    @include breakpoint($desktop-m) {
+        max-width: 535px;
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    @include breakpoint($desktop-s) {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 550px;
+    }
+
+    @include breakpoint($tablet) {
+        max-width: 405px;
+    }
 }

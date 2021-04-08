@@ -2,6 +2,18 @@
     width: 100%;
     padding: 40px 0 111px;
     background: $white;
+
+    @include breakpoint($desktop-m) {
+        padding-bottom: 88px;
+    }
+
+    @include breakpoint($desktop-s) {
+        padding-bottom: 80px;
+    }
+
+    @include breakpoint($tablet) {
+        padding-top: 33px;
+    }
 }
 
 .pictures__list {
@@ -38,6 +50,18 @@
     &:hover .pictures__content {
         opacity: 1;
     }
+
+    @include breakpoint($desktop-m) {
+        height: 376px;
+    }
+
+    @include breakpoint($desktop-s) {
+        height: 368px;
+    }
+
+    @include breakpoint($tablet) {
+        height: 272px;
+    }
 }
 
 .pictures__content {
@@ -51,18 +75,36 @@
     color: $white;
     opacity: 0;
     transition: opacity .1s linear;
+
+    @include breakpoint($desktop-s) {
+        height: 72px;
+        padding: 0 0 0 15px;
+    }
+
+    @include breakpoint($tablet) {
+        height: 56px;
+        padding: 0 0 0 10px;
+    }
 }
 
 .pictures__description {
     width: 80%;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint($desktop-s) {
+        width: 70%;
+    }
 }
 
 .pictures__author {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+
+    @include breakpoint($desktop-s) {
+        margin-bottom: 10px;
+    }
 }
 
 .pictures__avatar {
@@ -102,6 +144,15 @@
     position: absolute;
     right: 20px;
     bottom: 24px;
+
+    @include breakpoint($desktop-s) {
+        max-width: 30%;
+    }
+
+    @include breakpoint($tablet) {
+        right: 10px;
+        bottom: 15px;
+    }
 }
 
 .pictures__like-btn {
@@ -137,6 +188,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @include breakpoint($desktop-s) {
+        max-width: 70px;
+    }
+
+    @include breakpoint($tablet) {
+        max-width: 35px;
+    }
 }
 
 .pictures__btn {
@@ -161,6 +220,12 @@
     &:hover,
     &:active {
         color: $light-blue;
+    }
+
+    @include breakpoint($tablet) {
+        width: 191px;
+        height: 48px;
+        padding: 12px 30px;
     }
 }
 

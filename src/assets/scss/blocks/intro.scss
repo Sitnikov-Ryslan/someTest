@@ -5,6 +5,10 @@
     background: url('../images/intro-bg.jpg') no-repeat center center;
     background-size: cover;
     color: $white;
+
+    @include breakpoint($desktop-m) {
+        min-height: 704px;
+    }
 }
 
 .intro__title {
@@ -16,6 +20,23 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @include breakpoint($desktop-m) {
+        font-size: 48px;
+        line-height: 52px;
+        margin: 304px 0 11px;
+    }
+
+    @include breakpoint($desktop-s) {
+        line-height: 56px;
+        margin: 302px 0 11px;
+    }
+
+    @include breakpoint($tablet) {
+        font-size: 40px;
+        line-height: 52px;
+        margin: 240px 0 20px;
+    }
 }
 
 .intro__text {
@@ -27,6 +48,22 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @include breakpoint($desktop-m) {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 80px;
+    }
+
+    @include breakpoint($desktop-s) {
+        margin-bottom: 59px;
+    }
+
+    @include breakpoint($tablet) {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 116px;
+    }
 }
 
 .intro__link {
@@ -46,5 +83,16 @@
 
     &:focus {
         outline: 1px solid $yellow;
+    }
+
+    @include breakpoint($desktop-s) {
+        width: 272px;
+        height: 48px;
+        padding: 13px 32px;
+    }
+
+    @include breakpoint($tablet) {
+        font-size: 16px;
+        line-height: 20px;
     }
 }

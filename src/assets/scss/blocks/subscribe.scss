@@ -3,6 +3,10 @@
     height: 328px;
     background: $light-blue;
     color: $white;
+
+    @include breakpoint($desktop-s) {
+        height: 296px;
+    }
 }
 
 .subscribe__title {
@@ -10,6 +14,12 @@
     font-size: 40px;
     line-height: 52px;
     margin-bottom: 7px;
+
+    @include breakpoint($desktop-s) {
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 0;
+    }
 }
 
 .subscribe__text {
@@ -17,6 +27,17 @@
     font-size: 20px;
     line-height: 36px;
     margin-bottom: 37px;
+
+    @include breakpoint($desktop-m) {
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 32px;
+    }
+
+    @include breakpoint($desktop-s) {
+        font-size: 16px;
+        line-height: 28px;
+    }
 }
 
 .subscribe__btns {
@@ -25,6 +46,10 @@
     height: 56px;
     position: relative;
     background: $white;
+
+    @include breakpoint($desktop-s) {
+        height: 48px;
+    }
 }
 
 .subscribe__label {
@@ -36,6 +61,7 @@
     overflow: hidden;
 
     & p {
+        display: none;
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
@@ -66,6 +92,14 @@
             left: 24px;
             transform: none;
         }
+
+        @include breakpoint($desktop-s) {
+            top: 12px;
+        }
+    }
+
+    @include breakpoint($desktop-s) {
+        height: 48px;
     }
 }
 
@@ -111,6 +145,11 @@
             opacity: 1;
         }
     }
+
+    @include breakpoint($desktop-s) {
+        height: 48px;
+        padding: 12px 0 0 24px;
+    }
 }
 
 .subscribe__submit {
@@ -118,9 +157,14 @@
     width: 32px;
     height: 32px;
     border: 0;
+    padding: 0;
     position: absolute;
     top: 12px;
     right: 16px;
     background: url('../images/subscribe-submit.svg') no-repeat center center;
     cursor: pointer;
+
+    @include breakpoint($desktop-s) {
+        top: 8px;
+    }
 }

@@ -4,6 +4,11 @@
     background: $light-black;
     color: $white;
     padding: 84px 0 41px;
+
+    @include breakpoint($desktop-s) {
+        height: 488px;
+        padding: 80px 0 41px;
+    }
 }
 
 .footer__content {
@@ -13,6 +18,12 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 84px;
+
+    @include breakpoint($desktop-s) {
+        margin-bottom: 72px;
+        flex-direction: column;
+        height: 232px;
+    }
 }
 
 .footer__contacts {
@@ -21,6 +32,12 @@
     height: 36px;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint($desktop-s) {
+        width: 445px;
+        height: 32px;
+        margin: 56px 0;
+    }
 }
 
 .footer__phone {
@@ -36,6 +53,11 @@
     &:hover,
     &:active {
         color: $green;
+    }
+
+    @include breakpoint($desktop-s) {
+        font-size: 24px;
+        line-height: 32px;
     }
 }
 
@@ -69,6 +91,11 @@
 
     &:active:before {
         background: $light-blue;
+    }
+
+    @include breakpoint($desktop-s) {
+        font-size: 24px;
+        line-height: 32px;
     }
 }
 

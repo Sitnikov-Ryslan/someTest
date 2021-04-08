@@ -24,7 +24,9 @@
 
     @include breakpoint($desktop-s) {
         max-width: 100%;
-        margin-top: 0;
+        top: 0;
+        font-size: 18px;
+        line-height: 24px;
     }
 
     @include breakpoint($tablet) {
@@ -47,12 +49,36 @@
     &:focus {
         outline: 1px solid $yellow;
     }
+
+    @include breakpoint($desktop-m) {
+        margin: 0 60px;
+    }
+
+    @include breakpoint($desktop-s) {
+        margin: 0 43px 0 40px;
+    }
+
+    @include breakpoint($tablet) {
+        margin: 0 443px 0 64px;
+    }
 }
 
 .header__nav {
     display: flex;
     justify-content: space-between;
     margin-right: 405px;
+
+    @include breakpoint($desktop-m) {
+        margin-right: 144px;
+    }
+
+    @include breakpoint($desktop-s) {
+        margin-right: 44px;
+    }
+
+    @include breakpoint($tablet) {
+        display: none;
+    }
 }
 
 .header__link {
@@ -90,6 +116,10 @@
     &:active {
         color: $light-blue;
     }
+
+    @include breakpoint($desktop-s) {
+        margin-right: 23px;
+    }
 }
 
 .header__theme {
@@ -99,6 +129,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include breakpoint($desktop-m) {
+        width: 342px;
+    }
+
+    @include breakpoint($desktop-s) {
+        width: 288px;
+    }
+
+    @include breakpoint($tablet) {
+        display: none;
+    }
 }
 
 .header__switch {
@@ -110,6 +152,14 @@
 
     &:focus {
         outline: 1px solid $yellow;
+    }
+
+    @include breakpoint($desktop-m) {
+        margin: 0 12px;
+    }
+
+    @include breakpoint($desktop-s) {
+        margin: 0 16px;
     }
 }
 
@@ -142,10 +192,6 @@
         background: $green;
     }
 
-    // &:focus {
-    //     outline: 1px solid $yellow;
-    // }
-
     .header__input:checked + & {
         background: $dark-grey;
 
@@ -157,5 +203,69 @@
         &:active {
             background: $green;
         }
+    }
+}
+
+.header__burger {
+    width: 25px;
+    height: 2px;
+    display: none;
+    background: $black;
+    border: 0;
+    padding: 0;
+    position: relative;
+    cursor: pointer;
+
+    &:before,
+    &:after,
+    span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $black;
+        font-size: 0;
+        color: transparent;
+        position: absolute;
+        left: 0;
+    }
+
+    &:before {
+        top: -6px;
+        content: '';
+    }
+
+    &:after {
+        bottom: -6px;
+        content: '';
+    }
+
+    span {
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity .1s;
+    }
+
+    &.active {
+        span {
+            opacity: 0;
+        }
+
+        &:before,
+        &:after {
+            top: 50%;
+            transition: transform .2s;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @include breakpoint($tablet) {
+        display: block;
     }
 }

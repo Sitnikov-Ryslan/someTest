@@ -4,6 +4,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+
+    @include breakpoint($tablet) {
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+    }
 }
 
 .tabs__list {
@@ -11,6 +16,10 @@
     justify-content: space-between;
     max-width: 560px;
     height: 48px;
+
+    @include breakpoint($tablet) {
+        margin-bottom: 24px;
+    }
 }
 
 .tabs__item {
@@ -50,6 +59,11 @@
 
     &:focus {
         outline: 1px solid $yellow;
+    }
+
+    @include breakpoint($desktop-s) {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 

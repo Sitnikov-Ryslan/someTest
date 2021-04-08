@@ -12,6 +12,18 @@
     .feature & {
         padding-bottom: 80px;
         border-bottom: 1px solid $grey;
+
+        @include breakpoint($desktop-m) {
+            padding-bottom: 64px;
+        }
+
+        @include breakpoint($desktop-s) {
+            padding-bottom: 56px;
+        }
+
+        @include breakpoint($tablet) {
+            padding-bottom: 48px;
+        }
     }
 
     .pictures & {
@@ -24,6 +36,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include breakpoint($desktop-s) {
+            justify-content: space-around;
+        }
+
+        @include breakpoint($tablet) {
+            justify-content: space-between;
+            max-width: 642px;
+        }
     }
 
     .subscribe & {
@@ -31,6 +52,14 @@
         flex-direction: column;
         align-items: center;
         padding: 60px 0 80px;
+
+        @include breakpoint($desktop-m) {
+            padding: 75px 0 74px;
+        }
+
+        @include breakpoint($desktop-s) {
+            padding: 62px 0 80px;
+        }
     }
 
     @include breakpoint($desktop-m) {
