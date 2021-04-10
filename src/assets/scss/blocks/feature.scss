@@ -38,6 +38,12 @@
     @include breakpoint($tablet) {
         margin-bottom: 40px;
     }
+
+    @include breakpoint($mobile) {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 48px;
+    }
 }
 
 .feature__item {
@@ -70,6 +76,10 @@
         @include breakpoint($tablet) {
             background-size: 64px 64px;
         }
+
+        @include breakpoint($mobile) {
+            width: 100%;
+        }
     }
 
     &:last-child {
@@ -89,6 +99,11 @@
         @include breakpoint($tablet) {
             background-size: 64px 64px;
         }
+
+        @include breakpoint($mobile) {
+            width: 100%;
+            margin-bottom: 0;
+        }
     }
 
     @include breakpoint($desktop-m) {
@@ -107,6 +122,12 @@
     @include breakpoint($tablet) {
         padding-top: 74px;
         height: 146px;
+    }
+
+    @include breakpoint($mobile) {
+        height: 128px;
+        width: 100%;
+        margin-bottom: 32px;
     }
 }
 

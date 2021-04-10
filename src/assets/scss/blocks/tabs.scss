@@ -9,6 +9,10 @@
         flex-wrap: wrap;
         margin-bottom: 32px;
     }
+
+    @include breakpoint($mobile) {
+        margin-bottom: 28px;
+    }
 }
 
 .tabs__list {
@@ -19,6 +23,13 @@
 
     @include breakpoint($tablet) {
         margin-bottom: 24px;
+    }
+
+    @include breakpoint($mobile) {
+        margin-bottom: 28px;
+        justify-content: start;
+        flex-wrap: wrap;
+        height: auto;
     }
 }
 
@@ -102,6 +113,12 @@
 
     &:focus {
         outline: 1px solid $yellow;
+    }
+
+    @include breakpoint($mobile) {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 13px 45px 13px 28px;
     }
 }
 

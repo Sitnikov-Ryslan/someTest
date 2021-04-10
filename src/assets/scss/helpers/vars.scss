@@ -15,10 +15,10 @@ $green: #2ACCA3;
 $gradient: linear-gradient(89.82deg, #2F9BFF 0.12%, #2ACCA3 79.92%);
 
 $desktop-l: 1920px;
-$desktop-m: 1440px;
-$desktop-s: 1024px;
-$tablet: 768px;
-$mobile: 320px;
+$desktop-m: 1727px;
+$desktop-s: 1279px;
+$tablet: 1023px;
+$mobile: 687px;
 
 @mixin breakpoint($bp) {
     @media (max-width: $bp) {

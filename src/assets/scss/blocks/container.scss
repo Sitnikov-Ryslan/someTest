@@ -3,6 +3,13 @@
     max-width: 1504px;
     margin: 0 auto;
 
+    .header & {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+    }
+
     .intro & {
         display: flex;
         flex-direction: column;
@@ -23,6 +30,10 @@
 
         @include breakpoint($tablet) {
             padding-bottom: 48px;
+        }
+
+        @include breakpoint($mobile) {
+            padding-bottom: 40px;
         }
     }
 
@@ -45,6 +56,11 @@
             justify-content: space-between;
             max-width: 642px;
         }
+
+        @include breakpoint($mobile) {
+            flex-direction: column;
+            justify-content: start;
+        }
     }
 
     .subscribe & {
@@ -60,6 +76,11 @@
         @include breakpoint($desktop-s) {
             padding: 62px 0 80px;
         }
+
+        @include breakpoint($mobile) {
+            padding: 64px 20px;
+            text-align: center;
+        }
     }
 
     @include breakpoint($desktop-m) {
@@ -72,9 +93,18 @@
 
     @include breakpoint($tablet) {
         max-width: 640px;
+
+        .header.active & {
+            flex-direction: column;
+            max-width: 100%;
+        }
     }
 
     @include breakpoint($mobile) {
         padding: 0 20px;
+
+        .header.active & {
+            padding: 0;
+        }
     }
 }

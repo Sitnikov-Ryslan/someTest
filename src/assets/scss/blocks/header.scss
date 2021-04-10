@@ -27,15 +27,26 @@
         top: 0;
         font-size: 18px;
         line-height: 24px;
+        justify-content: center;
     }
 
     @include breakpoint($tablet) {
         height: 72px;
+
+        &.active {
+            height: 1024px;
+        }
     }
 
     @include breakpoint($mobile) {
         height: 56px;
-        padding: 0 20px;
+        justify-content: space-between;
+
+        &.active {
+            min-height: 480px;
+            height: auto;
+            padding: 0;
+        }
     }
 }
 
@@ -44,22 +55,34 @@
     width: 172px;
     height: 32px;
     background: url("../images/header-logo.svg");
-    margin: 0 85px 0 98px;
+    margin-right: 85px;
     
     &:focus {
         outline: 1px solid $yellow;
     }
 
     @include breakpoint($desktop-m) {
-        margin: 0 60px;
+        margin-right: 60px;
     }
 
     @include breakpoint($desktop-s) {
-        margin: 0 43px 0 40px;
+        margin-right: 43px;
     }
 
     @include breakpoint($tablet) {
-        margin: 0 443px 0 64px;
+        margin-right: 443px;
+
+        .header.active & {
+            margin: 80px 0 159px;
+        }
+    }
+
+    @include breakpoint($mobile) {
+        margin: 0;
+
+        .header.active & {
+            margin: 47px 0;
+        }
     }
 }
 
@@ -78,6 +101,27 @@
 
     @include breakpoint($tablet) {
         display: none;
+        flex-direction: column;
+        // margin: 0;
+        // position: absolute;
+        // top: 73px;
+        // left: 0;
+        background: $white;
+        width: 100%;
+
+        .header.active & {
+            display: flex;
+            margin-right: 0;
+            margin-bottom: 165px;
+        }
+    }
+
+    @include breakpoint($mobile) {
+        top: 57px;
+
+        .header.active & {
+            margin-bottom: 60px;
+        }
     }
 }
 
@@ -96,6 +140,12 @@
     &.active {
         color: $black;
 
+        @include breakpoint($tablet) {
+            .header.active & {
+                border-bottom: 3px solid $light-blue;
+            }
+        }
+
         &:after {
             content: '';
             position: absolute;
@@ -105,6 +155,12 @@
             background: $light-blue;
             top: 115%;
             left: 0;
+
+            @include breakpoint($tablet) {
+                .header.active & {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -120,26 +176,62 @@
     @include breakpoint($desktop-s) {
         margin-right: 23px;
     }
+
+    @include breakpoint($tablet) {
+        margin: 0 auto 15px;
+
+        &:last-child {
+            margin: 0 auto 15px;
+        }
+
+        .header.active & {
+            width: 100%;
+            margin: 0;
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $light-grey;
+            font-size: 32px;
+            line-height: 48px;
+            font-weight: bold;
+        }
+    }
+
+    @include breakpoint($mobile) {
+        .header.active & {
+            font-size: 24px;
+            line-height: 32px;
+            padding: 9px 0;
+        }
+    }
 }
 
 .header__theme {
-    width: 379px;
+    width: 303px;
     height: 100%;
     border-left: 1px solid $light-grey;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 
     @include breakpoint($desktop-m) {
-        width: 342px;
+        width: 284px;
     }
 
     @include breakpoint($desktop-s) {
-        width: 288px;
+        width: 248px;
     }
 
     @include breakpoint($tablet) {
         display: none;
+
+        .header.active & {
+            display: flex;
+            border-left: 0;
+            width: 212px;
+            height: 25px;
+        }
     }
 }
 
@@ -206,11 +298,35 @@
     }
 }
 
+.header__menu-btn {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 35px;
+
+    @include breakpoint($tablet) {
+        .header.active & {
+            top: 25px;
+            right: 15px;
+        }
+    }
+
+    @include breakpoint($mobile) {
+        top: 27px;
+        right: 20px;
+
+        .header.active & {
+            // top: 15px;
+            // right: 15px;
+        }
+    }
+}
+
 .header__burger {
     width: 25px;
     height: 2px;
     display: none;
-    background: $black;
+    background: none;
     border: 0;
     padding: 0;
     position: relative;
@@ -246,6 +362,7 @@
     }
 
     &.active {
+
         span {
             opacity: 0;
         }

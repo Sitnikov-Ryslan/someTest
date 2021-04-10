@@ -9,6 +9,11 @@
         height: 488px;
         padding: 80px 0 41px;
     }
+
+    @include breakpoint($mobile) {
+        padding: 64px 0;
+        height: auto;
+    }
 }
 
 .footer__content {
@@ -24,6 +29,10 @@
         flex-direction: column;
         height: 232px;
     }
+
+    @include breakpoint($mobile) {
+        height: auto;
+    }
 }
 
 .footer__contacts {
@@ -37,6 +46,12 @@
         width: 445px;
         height: 32px;
         margin: 56px 0;
+    }
+
+    @include breakpoint($mobile) {
+        flex-direction: column;
+        margin: 64px 0;
+        height: auto;
     }
 }
 
@@ -58,6 +73,10 @@
     @include breakpoint($desktop-s) {
         font-size: 24px;
         line-height: 32px;
+    }
+
+    @include breakpoint($mobile) {
+        margin-bottom: 28px;
     }
 }
 
@@ -105,6 +124,10 @@
     align-items: center;
     width: 296px;
     height: inherit;
+
+    @include breakpoint($mobile) {
+        width: 100%;
+    }
 }
 
 .footer__link {
@@ -176,4 +199,8 @@
     font-size: 16px;
     line-height: 24px;
     color: rgba($white, 0.56);
+
+    @include breakpoint($mobile) {
+        text-align: center;
+    }
 }
