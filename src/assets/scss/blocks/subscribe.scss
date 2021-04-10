@@ -76,7 +76,7 @@
     height: 56px;
     overflow: hidden;
 
-    & p {
+    & span {
         display: none;
         font-weight: normal;
         font-size: 16px;
@@ -87,7 +87,7 @@
         left: 198px;
     }
 
-    & span {
+    & b {
         display: block;
         font-weight: bold;
         font-size: 18px;
@@ -138,17 +138,17 @@
     color: $dark-grey;
     cursor: pointer;
 
-    & ~ span:first-of-type {
+    & ~ b:first-of-type {
         opacity: 1;
         transform: translateX(0);
     }
 
-    &:hover ~ span:first-of-type {
+    &:hover ~ b:first-of-type {
         opacity: 0;
         transform: translateX(-150%);
     }
 
-    &:hover ~ span:nth-of-type(2) {
+    &:hover ~ b:nth-of-type(2) {
         opacity: 1;
         transform: translateX(0);
     }
@@ -157,13 +157,13 @@
         outline: 0;
         border: 1px solid $yellow;
 
-        & ~ span:first-of-type,
-        & ~ span:nth-of-type(2) {
+        & ~ b:first-of-type,
+        & ~ b:nth-of-type(2) {
             opacity: 0;
             transform: translateX(-150%);
         }
 
-        & ~ span:last-of-type {
+        & ~ b:last-of-type {
             opacity: 1;
         }
     }
