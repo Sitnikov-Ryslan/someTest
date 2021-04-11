@@ -1,0 +1,130 @@
+.error {
+    width: 100%;
+    height: 903px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+
+    @include breakpoint($desktop-s) {
+        height: 895px;
+    }
+
+    @include breakpoint($desktop-s) {
+        height: 784px;
+    }
+
+    @include breakpoint($tablet) {
+        height: 726px;
+    }
+
+    @include breakpoint($mobile) {
+        height: 561px;
+    }
+}
+
+.error__inner {
+    width: 100%;
+    max-width: 737px;
+    height: 519px;
+    padding-top: 318px;
+    display: flex;
+    flex-direction: column;
+    background: url('../images/404.svg') no-repeat center top, transparent;
+    background-size: contain;
+    text-align: center;
+    align-items: center;
+
+    @include breakpoint($desktop-s) {
+        max-width: 622px;
+        height: 443px;
+        padding-top: 266px;
+    }
+
+    @include breakpoint($tablet) {
+        max-width: 474px;
+        height: 414px;
+        padding-top: 246px;
+    }
+
+    @include breakpoint($mobile) {
+        max-width: 280px;
+        height: 345px;
+        padding-top: 136px;
+    }
+}
+
+.error__title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    margin-bottom: 7px;
+
+    @include breakpoint($desktop-s) {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    @include breakpoint($tablet) {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint($mobile) {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 14px;
+    }
+}
+
+.error__text {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 55px;
+
+    @include breakpoint($desktop-s) {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 42px;
+    }
+
+    @include breakpoint($tablet) {
+        margin-bottom: 48px;
+    }
+
+    @include breakpoint($mobile) {
+        margin-bottom: 35px;
+    }
+}
+
+.error__link {
+    width: 288px;
+    height: 56px;
+    display: block;
+    background: $gradient;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:active {
+        background: $light-blue;
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    @include breakpoint($desktop-s) {
+        width: 272px;
+        height: 48px;
+    }
+
+    @include breakpoint($tablet) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

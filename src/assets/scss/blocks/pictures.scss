@@ -193,7 +193,8 @@
         background: url('../images/like-hover.svg') no-repeat center center, $white;
     }
 
-    &:active {
+    &:active,
+    &.active {
         background: url('../images/like-active.svg') no-repeat center center, $white;
     }
 }
@@ -264,8 +265,15 @@
     padding: 0;
     cursor: pointer;
 
+    &.fixed {
+        position: fixed;
+        z-index: 5;
+        bottom: 5%;
+        right: 7%;
+    }
+
     &.active {
-        background: url('../images/scroll-arrow-active.svg') no-repeat center center, $light-blue;
+        background: url('../images/scroll-arrow.svg') no-repeat center center, $light-blue;
     }
 
     &:hover {

@@ -1,5 +1,4 @@
 @import "helpers/vars";
-@import "helpers/hidden.scss";
 
 body {
     font-size: 32px;
@@ -40,6 +39,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 @import "blocks/page.scss";
 @import "blocks/container.scss";
+@import "blocks/preview.scss";
 @import "blocks/header.scss";
 @import "blocks/intro.scss";
 @import "blocks/feature.scss";
@@ -49,3 +49,7 @@ h1, h2, h3, h4, h5, h6, p {
 @import "blocks/subscribe.scss";
 @import "blocks/footer.scss";
 @import "blocks/modal.scss";
+@import "blocks/result.scss";
+@import "blocks/error.scss";
+
+@import "helpers/hidden.scss";

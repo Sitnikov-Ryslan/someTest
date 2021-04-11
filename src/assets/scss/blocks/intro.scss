@@ -93,12 +93,14 @@
 .intro__link {
     width: 288px;
     height: 56px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: $gradient;
     font-weight: bold;
     font-size: 18px;
     line-height: 24px;
-    padding: 16px 41px;
+    color: $white;
 
     &:hover,
     &:active {
@@ -112,15 +114,12 @@
     @include breakpoint($desktop-s) {
         width: 272px;
         height: 48px;
-        padding: 13px 32px;
+        // padding: 13px 32px;
     }
 
     @include breakpoint($tablet) {
         font-size: 16px;
         line-height: 20px;
-    }
-
-    @include breakpoint($mobile) {
-        padding: 14px 44px;
+        // padding: 14px 44px;
     }
 }

@@ -1,8 +1,8 @@
 {
-    "name": "brainscloud",
+    "name": "ryslan",
     "version": "1.0.0",
-    "description": "brainscloud",
-    "author": "brainscloud",
+    "description": "ryslan",
+    "author": "ryslan",
     "devDependencies": {
         "@babel/core": "^7.12.3",
         "@babel/preset-env": "^7.12.1",

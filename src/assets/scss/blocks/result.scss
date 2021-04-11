@@ -1,0 +1,59 @@
+.result__title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    margin-bottom: 8px;
+
+    @include breakpoint($mobile) {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 6px;
+    }
+}
+
+.result__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 29px;
+
+    @include breakpoint($tablet) {
+        font-size: 18px;
+    }
+
+    @include breakpoint($tablet) {
+
+    }
+}
+
+.result__link {
+    width: 288px;
+    height: 56px;
+    display: block;
+    background: $gradient;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 16px 41px;
+    color: $white;
+
+    &:hover,
+    &:active {
+        background: $light-blue;
+    }
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
+
+    @include breakpoint($desktop-s) {
+        width: 272px;
+        height: 48px;
+        padding: 13px 32px;
+    }
+
+    @include breakpoint($tablet) {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 14px 44px;
+    }
+}

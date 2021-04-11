@@ -17,6 +17,38 @@
     color: $black;
     z-index: 1;
 
+    &.fixed {
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        max-width: 100%;
+        top: 0;
+
+        @include breakpoint($desktop-m) {
+            height: 72px;
+        }
+
+        @include breakpoint($desktop-s) {
+            height: 64px;
+        }
+
+        @include breakpoint($tablet) {
+            height: 56px;
+
+            & .header__menu-btn {
+                top: 27px;
+            }
+        }
+
+        @include breakpoint($mobile) {
+            height: 48px;
+
+            & .header__menu-btn {
+                top: 23px;
+            }
+        }
+    }
+
     @include breakpoint($desktop-m) {
         max-width: 1320px;
         height: 80px;
@@ -315,10 +347,10 @@
         top: 27px;
         right: 20px;
 
-        .header.active & {
-            // top: 15px;
-            // right: 15px;
-        }
+        // .header.active & {
+        //     // top: 15px;
+        //     // right: 15px;
+        // }
     }
 }
 
@@ -331,6 +363,7 @@
     padding: 0;
     position: relative;
     cursor: pointer;
+    outline: none;
 
     &:before,
     &:after,
