@@ -7,14 +7,16 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('active');
 })
 
-// let activateLink = function(item) {
-//     headerLinks.forEach(function(el) {
-//         el.classList.remove('active');
-//     })
-//     item.classList.add('active');
-//     console.log(item);
-// }
+let activateLink = function(item) {
+    headerLinks.forEach(function(el) {
+        el.classList.remove('active');
+    })
+    item.classList.add('active');
+}
 
-// headerLinks.forEach((elem) => {
-//     elem.addEventListener('click', activateLink(elem))
-// })
+headerLinks.forEach((elem) => {
+    elem.addEventListener('click', (event) => {
+        event.preventDefault();
+        activateLink(elem);
+    })
+})

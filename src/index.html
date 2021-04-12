@@ -284,17 +284,17 @@ title: someTest
     </div>
 </section>
 
-<form action="someURL" class="subscribe" method="POST">
+<form action="someURL" class="subscribe" method="POST" novalidate>
     <div class="container">
         <h1 class="subscribe__title">Присоединяйся к нам!</h1>
         <p class="subscribe__text">Подписывайся на новые коллекции изображений!</p>
         <div class="subscribe__btns">
             <label class="subscribe__label">
-                <span>Проверьте название почты!</span>
-                <input type="email" name="email" class="subscribe__input" maxlength="50">
-                <b>Подписаться</b>
-                <b>Введите e-mail</b>
-                <b>E-mail</b>
+                <span aria-live="polite" id="error-msg">Проверьте название почты!</span>
+                <input type="email" name="email" class="subscribe__input" maxlength="50" minlength="6" required>
+                <b id="label1">Подписаться</b>
+                <b id="label2">Введите e-mail</b>
+                <b id="label3">E-mail</b>
             </label>
             <button type="submit" class="subscribe__submit">
                 <span class="visually-hidden">Subscribe</span>

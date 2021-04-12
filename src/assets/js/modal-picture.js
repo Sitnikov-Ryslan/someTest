@@ -1,4 +1,4 @@
-const body = document.body;
+let body = document.body;
 let pictures = document.querySelectorAll('.pictures__link');
 let modalPicture = document.querySelector('.modal_picture');
 let modalPicContent = document.querySelector('.modal__content_pic');
@@ -27,7 +27,7 @@ let showPic = function(elem) {
         body.classList.remove('no-scroll');
         modalPicture.classList.add('hidden');
         modalPicture.removeEventListener('click', closeModal);
-        modalPicContent.removeEventListener('click', stopProp)
+        modalPicContent.removeEventListener('click', stopProp);
     }
 
     modalPicture.addEventListener('click', closeModal)

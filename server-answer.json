@@ -1,0 +1,10 @@
+{ 
+    "body": "ReadableStream",
+    "bodyUsed": false,
+    "headers": "application/json",
+    "ok": true, 
+    "redirected": false,
+    "status": 200,
+    "statusText": "OK",
+    "type": "basic" 
+}
