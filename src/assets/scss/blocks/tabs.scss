@@ -5,6 +5,10 @@
     justify-content: space-between;
     margin-bottom: 40px;
 
+    &.dark {
+        background: $light-black;
+    }
+
     @include breakpoint($tablet) {
         flex-wrap: wrap;
         margin-bottom: 32px;
@@ -53,6 +57,26 @@
     border-radius: 30px;
     cursor: pointer;
 
+    .tabs.dark & {
+        background: $light-black;
+        border: 1px solid $dark-grey;
+
+        &.active {
+            color: $light-blue;
+            background: $dark-grey;
+        }
+    
+        &:hover {
+            color: $light-blue;
+            background: $dark-grey;
+        }
+    
+        &:active {
+            color: $light-blue;
+            background: $dark-grey;
+        }
+    }
+
     &.active {
         color: $light-blue;
         background: $light-grey;
@@ -98,6 +122,26 @@
     border-radius: 30px;
     cursor: pointer;
 
+    .tabs.dark & {
+        background: url('../images/select-arrow.svg') no-repeat 90% center, $light-black;
+        border: 1px solid $dark-grey;
+
+        &.active {
+            color: $light-blue;
+            background: url('../images/select-arrow.svg') no-repeat 90% center, $dark-grey;
+        }
+    
+        &:hover {
+            color: $light-blue;
+            background: url('../images/select-arrow.svg') no-repeat 90% center, $dark-grey;
+        }
+    
+        &:active {
+            color: $light-blue;
+            background: url('../images/select-arrow.svg') no-repeat 90% center, $dark-grey;
+        }
+    }
+
     &:hover,
     &:active {
         background: url('../images/select-arrow-black.svg') no-repeat 90% center, $white;
@@ -136,10 +180,29 @@
     box-shadow: 0px 6px 7px rgba(16, 24, 40, 0.05);
     margin-bottom: 1px;
     cursor: pointer;
-    display: none;
 
     & input {
         display: none;
+    }
+
+    .tabs.dark & {
+        background: $dark-grey;
+        // border: 1px solid $dark-grey;
+
+        &.active {
+            color: $light-blue;
+            background: $deep-grey;
+        }
+    
+        &:hover {
+            color: $light-blue;
+            background: $deep-grey;
+        }
+    
+        &:active {
+            color: $light-blue;
+            background: $deep-grey;
+        }
     }
 
     &:hover,

@@ -3,6 +3,15 @@
     background: $white;
     padding-top: 95px;
 
+    &.dark {
+        background: $light-black;
+        color: $white;
+
+        & .feature__content {
+            color: $deep-grey;
+        }
+    }
+
     @include breakpoint($desktop-m) {
         padding-top: 81px;
     }

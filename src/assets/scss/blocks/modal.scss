@@ -28,6 +28,11 @@
     align-items: center;
     justify-content: center;
 
+    &.dark {
+        background: $light-black;
+        color: $white;
+    }
+
     @include breakpoint($desktop-m) {
         max-width: 1200px;
         max-height: 836px;
@@ -145,6 +150,14 @@
     &_result {
         right: 0;
         background: url('../images/close-modal-black.svg') no-repeat center center, transparent;
+
+        .modal__content.dark & {
+            background:  url('../images/close-modal.svg') no-repeat center center, transparent;
+
+            &:hover {
+                background: url('../images/close-modal-grey.svg') no-repeat center center, transparent;
+            }
+        }
     }
 
     &:focus {

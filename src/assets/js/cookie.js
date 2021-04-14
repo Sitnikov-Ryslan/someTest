@@ -10,34 +10,28 @@ let checkCookie = function(name) {
 
 let checkIntervalCookie = function() {
     let lastCookie = document.cookie;
+    
     return function() {
         let currentCookie = document.cookie;
-
+        
         if (currentCookie != lastCookie) {
-            cookieBox.classList.remove('hidden');
-            console.log(document.cookie);
-            // lastCookie = currentCookie;
-        } else {
             cookieBox.classList.add('hidden');
-            console.log(document.cookie);
+        } else {
+            cookieBox.classList.remove('hidden');
+        }
+
+        if (checkCookie('opinion')) {
+            cookieBox.classList.add('hidden');
+        } else {
+            cookieBox.classList.remove('hidden');
         }
     };
 };
 
-window.setInterval(checkIntervalCookie('opinion'), 100);
-
 window.addEventListener('load', () => {
-    if (checkCookie('opinion')) {
-        cookieBox.classList.add('hidden');
-    } else {
-        cookieBox.classList.remove('hidden');
-    }
-    // window.setInterval(checkIntervalCookie('opinion'), 100);
+    window.setInterval(checkIntervalCookie('opinion'), 100);
 })
 
 cookieBtn.addEventListener('click', function() {
-    document.cookie = "opinion=agree; max-age=3; path=/; samesite=lax";
-    cookieBox.classList.add('hidden');
-    console.log(document.cookie);
-    window.setInterval(checkIntervalCookie('opinion'), 100);
+    document.cookie = "opinion=agree; max-age=8; path=/; samesite=lax";
 })

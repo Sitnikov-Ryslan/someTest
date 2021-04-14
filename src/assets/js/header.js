@@ -15,8 +15,7 @@ let activateLink = function(item) {
 }
 
 headerLinks.forEach((elem) => {
-    elem.addEventListener('click', (event) => {
-        event.preventDefault();
+    elem.addEventListener('click', () => {
         activateLink(elem);
     })
 })

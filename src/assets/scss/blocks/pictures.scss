@@ -3,6 +3,10 @@
     padding: 40px 0 111px;
     background: $white;
 
+    &.dark {
+        background: $light-black;
+    }
+
     @include breakpoint($desktop-m) {
         padding-bottom: 88px;
     }
@@ -232,6 +236,10 @@
     border: 0;
     cursor: pointer;
     padding: 16px 48px;
+
+    .pictures.dark & {
+        background: $dark-grey;
+    }
 
     &:focus {
         outline: 1px solid $yellow;

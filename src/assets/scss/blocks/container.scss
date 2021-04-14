@@ -37,6 +37,10 @@
         }
     }
 
+    .feature.dark & {
+        border-bottom: 1px solid $dark-grey;
+    }
+
     .pictures & {
         position: relative;
     }
