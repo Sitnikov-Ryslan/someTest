@@ -4,9 +4,8 @@ let pic = document.querySelector('.pictures');
 let tabs = document.querySelector('.tabs');
 let preview = document.querySelector('.preview');
 let modalContents = document.querySelectorAll('.modal__content');
-let err = document.querySelector('.error');
 
-darkBtn.addEventListener('click', () => {
+let darkPage = function() {
     if (darkBtn.checked) {
         feat.classList.add('dark');
         pic.classList.add('dark');
@@ -15,7 +14,6 @@ darkBtn.addEventListener('click', () => {
         modalContents.forEach((i) => {
             i.classList.add('dark');
         })
-        err.classList.add('dark');
     } else {
         feat.classList.remove('dark');
         pic.classList.remove('dark');
@@ -24,6 +22,8 @@ darkBtn.addEventListener('click', () => {
         modalContents.forEach((i) => {
             i.classList.remove('dark');
         })
-        err.classList.remove('dark');
     }
-})
+}
+
+darkBtn.addEventListener('click', darkPage);
+window.addEventListener('load', darkPage);
