@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     margin: 0 auto;
-    box-shadow: 0px 6px 7px rgba(16, 24, 40, 0.05);
+    box-shadow: 0 6px 7px rgba(16, 24, 40, 0.05);
     border-radius: 4px;
     font-size: 20px;
     line-height: 32px;
@@ -134,10 +134,6 @@
     @include breakpoint($tablet) {
         display: none;
         flex-direction: column;
-        // margin: 0;
-        // position: absolute;
-        // top: 73px;
-        // left: 0;
         background: $white;
         width: 100%;
 
@@ -158,7 +154,7 @@
 }
 
 .header__link {
-    font-family: "Roboto", sans-serif;
+    @extend %roboto-regular;
     color: $black;
     text-decoration: none;
     margin-right: 40px;
@@ -178,8 +174,8 @@
             }
         }
 
-        &:after {
-            content: '';
+        &::after {
+            content: "";
             position: absolute;
             display: block;
             width: 100%;
@@ -226,7 +222,7 @@
             border: 1px solid $light-grey;
             font-size: 32px;
             line-height: 48px;
-            font-weight: bold;
+            font-weight: 700;
         }
     }
 
@@ -295,20 +291,20 @@
     right: 0;
     bottom: 0;
     background: $light-blue;
-    box-shadow: inset 0px 2px 5px rgba(16, 24, 40, 0.09);
+    box-shadow: inset 0 2px 5px rgba(16, 24, 40, 0.09);
     border-radius: 30px;
-    transition: background-color .2s linear;
+    transition: background-color 0.2s linear;
 
-    &:before {
+    &::before {
         position: absolute;
-        content: '';
+        content: "";
         height: 20px;
         width: 20px;
         top: 2px;
         right: 2px;
         background-color: white;
         border-radius: 50%;
-        transition: transform .2s linear;
+        transition: transform 0.2s linear;
     }
 
     &:hover,
@@ -319,7 +315,7 @@
     .header__input:checked + & {
         background: $dark-grey;
 
-        &:before {
+        &::before {
             transform: translateX(-24px);
         }
 
@@ -330,7 +326,7 @@
     }
 }
 
-.header__menu-btn {
+.header__menu_btn {
     position: absolute;
     display: block;
     right: 0;
@@ -346,11 +342,6 @@
     @include breakpoint($mobile) {
         top: 27px;
         right: 20px;
-
-        // .header.active & {
-        //     // top: 15px;
-        //     // right: 15px;
-        // }
     }
 }
 
@@ -365,8 +356,8 @@
     cursor: pointer;
     outline: none;
 
-    &:before,
-    &:after,
+    &::before,
+    &::after,
     span {
         display: block;
         width: 100%;
@@ -378,12 +369,12 @@
         left: 0;
     }
 
-    &:before {
+    &::before {
         top: -6px;
         content: '';
     }
 
-    &:after {
+    &::after {
         bottom: -6px;
         content: '';
     }
@@ -391,7 +382,7 @@
     span {
         top: 50%;
         transform: translateY(-50%);
-        transition: opacity .1s;
+        transition: opacity 0.1s;
     }
 
     &.active {
@@ -400,17 +391,17 @@
             opacity: 0;
         }
 
-        &:before,
-        &:after {
+        &::before,
+        &::after {
             top: 50%;
-            transition: transform .2s;
+            transition: transform 0.2s;
         }
 
-        &:before {
+        &::before {
             transform: rotate(45deg);
         }
 
-        &:after {
+        &::after {
             transform: rotate(-45deg);
         }
     }

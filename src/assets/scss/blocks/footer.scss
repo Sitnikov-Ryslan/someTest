@@ -56,8 +56,7 @@
 }
 
 .footer__phone {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    @extend %roboto-bold;
     font-size: 28px;
     line-height: 36px;
 
@@ -81,8 +80,7 @@
 }
 
 .footer__email {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    @extend %roboto-bold;
     font-size: 28px;
     line-height: 36px;
     color: $light-blue;
@@ -96,8 +94,8 @@
     &:active {
         color: $mail-blue;
 
-        &:before {
-            content: '';
+        &::before {
+            content: "";
             position: absolute;
             top: 100%;
             left: 0;
@@ -108,7 +106,7 @@
         }
     }
 
-    &:active:before {
+    &:active::before {
         background: $light-blue;
     }
 
@@ -138,7 +136,7 @@
     background: $light-grey;
 
     &:first-child {
-        background: url('../images/vk-icon.svg') no-repeat center center;
+        background: url("../images/vk-icon.svg") no-repeat center center;
 
         &:focus {
             outline: 1px solid $yellow;
@@ -146,12 +144,12 @@
 
         &:hover,
         &:active {
-            background: url('../images/vk-white.svg') no-repeat center center;
+            background: url("../images/vk-white.svg") no-repeat center center;
         }
     }
 
     &:nth-child(2) {
-        background: url('../images/fb-icon.svg') no-repeat center center;
+        background: url("../images/fb-icon.svg") no-repeat center center;
 
         &:focus {
             outline: 1px solid $yellow;
@@ -159,12 +157,12 @@
 
         &:hover,
         &:active {
-            background: url('../images/fb-white.svg') no-repeat center center;
+            background: url("../images/fb-white.svg") no-repeat center center;
         }
     }
 
     &:nth-child(3) {
-        background: url('../images/ok-icon.svg') no-repeat center center;
+        background: url("../images/ok-icon.svg") no-repeat center center;
 
         &:focus {
             outline: 1px solid $yellow;
@@ -172,12 +170,12 @@
 
         &:hover,
         &:active {
-            background: url('../images/ok-white.svg') no-repeat center center;
+            background: url("../images/ok-white.svg") no-repeat center center;
         }
     }
 
     &:last-child {
-        background: url('../images/in-icon.svg') no-repeat center center;
+        background: url("../images/in-icon.svg") no-repeat center center;
 
         &:focus {
             outline: 1px solid $yellow;
@@ -185,7 +183,7 @@
 
         &:hover,
         &:active {
-            background: url('../images/in-white.svg') no-repeat center center;
+            background: url("../images/in-white.svg") no-repeat center center;
         }
     }
 }
@@ -195,7 +193,7 @@
     justify-content: center;
     border-top: 1px solid rgba($grey, 0.12);
     padding-top: 38px;
-    font-weight: normal;
+    @extend %roboto-regular;
     font-size: 16px;
     line-height: 24px;
     color: rgba($white, 0.56);

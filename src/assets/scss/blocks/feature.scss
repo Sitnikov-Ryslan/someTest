@@ -63,7 +63,7 @@
     width: 30%;
 
     &:first-child {
-        background: url('../images/feature-1.svg') no-repeat left center;
+        background: url("../images/feature-1.svg") no-repeat left center;
 
         @include breakpoint($desktop-s) {
             background-position: center top;
@@ -76,7 +76,7 @@
 
     &:nth-child(2) {
         width: 31%;
-        background: url('../images/feature-2.svg') no-repeat left center;
+        background: url("../images/feature-2.svg") no-repeat left center;
 
         @include breakpoint($desktop-s) {
             background-position: center top;
@@ -94,7 +94,7 @@
     &:last-child {
         width: 29%;
         padding-right: 55px;
-        background: url('../images/feature-3.svg') no-repeat left center;
+        background: url("../images/feature-3.svg") no-repeat left center;
 
         @include breakpoint($desktop-m) {
             padding-right: 15px;
@@ -142,8 +142,7 @@
 
 .feature__content {
     max-width: 600px;
-    font-family: 'Merriweather', serif;
-    font-weight: normal;
+    @extend %merriweather-regular;
     font-size: 20px;
     line-height: 36px;
     color: $dark-grey;

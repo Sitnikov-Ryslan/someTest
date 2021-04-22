@@ -1,11 +1,11 @@
+@import "helpers/fonts";
 @import "helpers/vars";
 
 body {
     font-size: 32px;
     line-height: 40px;
     color: $black;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    @extend %roboto-regular;
     margin: 0;
     min-width: 320px;
 
@@ -15,8 +15,8 @@ body {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 

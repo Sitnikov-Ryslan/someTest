@@ -46,8 +46,7 @@
 }
 
 .tabs__btn {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    @extend %roboto-bold;
     font-size: 18px;
     line-height: 24px;
     color: $light-blue;
@@ -111,40 +110,39 @@
 .tabs__select_title {
     width: 100%;
     height: 48px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    @extend %roboto-bold;
     font-size: 18px;
     line-height: 24px;
     color: $light-blue;
     padding: 10px 51px 10px 30px;
-    background: url('../images/select-arrow.svg') no-repeat 90% center, $white;
+    background: url("../images/select-arrow.svg") no-repeat 90% center, $white;
     border: 1px solid $grey;
     border-radius: 30px;
     cursor: pointer;
 
     .tabs.dark & {
-        background: url('../images/select-arrow.svg') no-repeat 90% center, $light-black;
+        background: url("../images/select-arrow.svg") no-repeat 90% center, $light-black;
         border: 1px solid $dark-grey;
 
         &.active {
             color: $light-blue;
-            background: url('../images/select-arrow.svg') no-repeat 90% center, $dark-grey;
+            background: url("../images/select-arrow.svg") no-repeat 90% center, $dark-grey;
         }
     
         &:hover {
             color: $light-blue;
-            background: url('../images/select-arrow.svg') no-repeat 90% center, $dark-grey;
+            background: url("../images/select-arrow.svg") no-repeat 90% center, $dark-grey;
         }
     
         &:active {
             color: $light-blue;
-            background: url('../images/select-arrow.svg') no-repeat 90% center, $dark-grey;
+            background: url("../images/select-arrow.svg") no-repeat 90% center, $dark-grey;
         }
     }
 
     &:hover,
     &:active {
-        background: url('../images/select-arrow-black.svg') no-repeat 90% center, $white;
+        background: url("../images/select-arrow-black.svg") no-repeat 90% center, $white;
     }
 
     &:hover {
@@ -173,11 +171,11 @@
     border: 0;
     padding: 8px 32px;
     background: $white;
-    font-weight: bold;
+    @extend %roboto-bold;
     font-size: 18px;
     line-height: 24px;
     color: $light-blue;
-    box-shadow: 0px 6px 7px rgba(16, 24, 40, 0.05);
+    box-shadow: 0 6px 7px rgba(16, 24, 40, 0.05);
     margin-bottom: 1px;
     cursor: pointer;
 
@@ -187,7 +185,6 @@
 
     .tabs.dark & {
         background: $dark-grey;
-        // border: 1px solid $dark-grey;
 
         &.active {
             color: $light-blue;
@@ -220,16 +217,16 @@
     height: 48px;
     border: 0;
     border-radius: 50%;
-    background: url('../images/sort-arrow.svg') no-repeat center center, $green;
+    background: url("../images/sort-arrow.svg") no-repeat center center, $green;
     padding: 0;
     cursor: pointer;
 
     &.active {
-        background: url('../images/sort-arrow-active.svg') no-repeat center center, $green;
+        background: url("../images/sort-arrow-active.svg") no-repeat center center, $green;
     }
 
     &:hover {
-        background: url('../images/sort-arrow.svg') no-repeat center center, $light-blue;
+        background: url("../images/sort-arrow.svg") no-repeat center center, $light-blue;
     }
 
     &:focus {

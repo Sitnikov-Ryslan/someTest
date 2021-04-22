@@ -1,33 +1,35 @@
-let body = document.body;
-let pictures = document.querySelectorAll('.pictures__link');
-let modalPicture = document.querySelector('.modal_picture');
-let modalPicContent = document.querySelector('.modal__content_pic');
+const body = document.body
+const pictures = document.querySelectorAll('.pictures__link')
+const modalPicture = document.querySelector('.modal_picture')
+const modalPicContent = document.querySelector('.modal__content_pic')
 
 let showPic = function(elem) {
     elem.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    body.classList.add('no-scroll');
-    modalPicture.classList.remove('hidden');
+    evt.preventDefault()
 
-    let modalClose = modalPicture.querySelector('.modal__close');
+    body.classList.add('no-scroll')
+    modalPicture.classList.remove('hidden')
 
-    let dataAtr = elem.dataset.src;
-    let modalImg = modalPicContent.querySelector('img');
-    let modalLink = modalPicContent.querySelector('.modal__link');
+    let modalClose = modalPicture.querySelector('.modal__close')
+    let dataAtr = elem.dataset.src
+    let modalImg = modalPicContent.querySelector('img')
+    let modalLink = modalPicContent.querySelector('.modal__link')
 
-    modalImg.src = dataAtr;
-    modalLink.href = dataAtr;
+    modalImg.src = dataAtr
+    modalLink.href = dataAtr
 
     let stopProp = function(evt) {
-        evt.stopPropagation();
+        evt.stopPropagation()
     }
 
     let closeModal = function(evt) {
-        evt.preventDefault();
-        body.classList.remove('no-scroll');
-        modalPicture.classList.add('hidden');
-        modalPicture.removeEventListener('click', closeModal);
-        modalPicContent.removeEventListener('click', stopProp);
+        evt.preventDefault()
+
+        body.classList.remove('no-scroll')
+        modalPicture.classList.add('hidden')
+        
+        modalPicture.removeEventListener('click', closeModal)
+        modalPicContent.removeEventListener('click', stopProp)
     }
 
     modalPicture.addEventListener('click', closeModal)

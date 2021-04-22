@@ -4,9 +4,9 @@
     height: 120px;
     background: linear-gradient(89.82deg, #2F9BFF 0.12%, #2ACCA3 79.92%);
 
-    &:before,
-    &:after {
-        content: '';
+    &::before,
+    &::after {
+        content: "";
         position: absolute;
         top: 0;
         width: 27%;
@@ -22,9 +22,9 @@
         }
     }
 
-    &:before {
+    &::before {
         left: 0;
-        background: url('../images/new-before.png') no-repeat center center;
+        background: url("../images/new-before.png") no-repeat center center;
 
         @include breakpoint($desktop-m) {
             left: -240px;
@@ -43,9 +43,9 @@
         }
     }
 
-    &:after {
+    &::after {
         right: 0;
-        background: url('../images/new-after.png') no-repeat center center;
+        background: url("../images/new-after.png") no-repeat center center;
 
         @include breakpoint($desktop-m) {
             right: -240px;
@@ -88,8 +88,7 @@
 }
 
 .new__link {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    @extend %roboto-bold;
     font-size: 18px;
     line-height: 24px;
     color: $white;

@@ -2,17 +2,17 @@ $white: #fff;
 $light-grey: #f5f5f5;
 $grey: #dbdbdb;
 $dark-grey: #666b75;
-$deep-grey: #A9ACB2;
+$deep-grey: #a9acb2;
 $light-black: #101828;
 $black: #0f0f0f;
-$yellow: #FFB609;
-$light-blue: #2F9BFF;
-$blue: #0D3DBC;
-$mail-blue: #3FA2FF;
-$red: #FF0D0C;
-$green: #2ACCA3;
+$yellow: #ffb609;
+$light-blue: #2f9bff;
+$blue: #0d3dbc;
+$mail-blue: #3fa2ff;
+$red: #ff0d0c;
+$green: #2acca3;
 
-$gradient: linear-gradient(89.82deg, #2F9BFF 0.12%, #2ACCA3 79.92%);
+$gradient: linear-gradient(89.82deg, #2f9bff 0.12%, #2acca3 79.92%);
 
 $desktop-l: 1920px;
 $desktop-m: 1727px;
@@ -24,4 +24,24 @@ $mobile: 687px;
     @media (max-width: $bp) {
         @content;
     }
+}
+
+%roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+%roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+%roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+%merriweather-regular {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
 }

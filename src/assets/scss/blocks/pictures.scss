@@ -63,7 +63,7 @@
     justify-content: flex-end;
     width: 100%;
     height: 472px;
-    background: url('../images/picture.jpg') no-repeat center center, $white;
+    background: url("../images/picture.jpg") no-repeat center center, $white;
     background-size: cover;
 
     &:focus {
@@ -97,7 +97,7 @@
     padding: 32px 20px 32px 32px;
     color: $white;
     opacity: 0;
-    transition: opacity .1s linear;
+    transition: opacity 0.1s linear;
 
     @include breakpoint($desktop-s) {
         height: 72px;
@@ -152,7 +152,7 @@
 .pictures__title {
     font-size: 16px;
     line-height: 24px;
-    font-weight: 500;
+    @extend %roboto-medium;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -178,12 +178,12 @@
     }
 }
 
-.pictures__like-btn {
+.pictures__like_btn {
     display: block;
     width: 39px;
     height: 39px;
     border-radius: 50%;
-    background: url('../images/like.svg') no-repeat center center, $white;
+    background: url("../images/like.svg") no-repeat center center, $white;
     padding: 0;
     border: 0;
     margin: 0 8px 0 0;
@@ -194,20 +194,20 @@
     }
 
     &:hover {
-        background: url('../images/like-hover.svg') no-repeat center center, $white;
+        background: url("../images/like-hover.svg") no-repeat center center, $white;
     }
 
     &:active,
     &.active {
-        background: url('../images/like-active.svg') no-repeat center center, $white;
+        background: url("../images/like-active.svg") no-repeat center center, $white;
     }
 }
 
-.pictures__like-counter {
+.pictures__like_counter {
     max-width: 95px;
     font-size: 16px;
     line-height: 24px;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -223,11 +223,12 @@
 }
 
 .pictures__btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 224px;
     height: 56px;
-    font-family: 'Roboto, sans-serif';
-    font-weight: bold;
+    @extend %roboto-bold;
     font-size: 18px;
     line-height: 24px;
     color: $green;
@@ -235,7 +236,6 @@
     background: $light-grey;
     border: 0;
     cursor: pointer;
-    padding: 16px 48px;
 
     .pictures.dark & {
         background: $dark-grey;
@@ -253,7 +253,6 @@
     @include breakpoint($tablet) {
         width: 191px;
         height: 48px;
-        padding: 12px 30px;
     }
 
     @include breakpoint($mobile) {
@@ -261,7 +260,7 @@
     }
 }
 
-.pictures__scroll-btn {
+.pictures__scroll_btn {
     position: absolute;
     bottom: -55px;
     right: 0;
@@ -269,7 +268,7 @@
     height: 56px;
     border: 0;
     border-radius: 50%;
-    background: url('../images/scroll-arrow.svg') no-repeat center center, $green;
+    background: url("../images/scroll-arrow.svg") no-repeat center center, $green;
     padding: 0;
     cursor: pointer;
 
@@ -281,11 +280,11 @@
     }
 
     &.active {
-        background: url('../images/scroll-arrow.svg') no-repeat center center, $light-blue;
+        background: url("../images/scroll-arrow.svg") no-repeat center center, $light-blue;
     }
 
     &:hover {
-        background: url('../images/scroll-arrow.svg') no-repeat center center, $light-blue;
+        background: url("../images/scroll-arrow.svg") no-repeat center center, $light-blue;
     }
 
     &:focus {

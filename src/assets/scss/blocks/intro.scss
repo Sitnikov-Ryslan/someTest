@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     min-height: 937px;
-    background: url('../images/intro-bg.jpg') no-repeat center center;
+    background: url("../images/intro-bg.jpg") no-repeat center center;
     background-size: cover;
     color: $white;
 
@@ -114,12 +114,10 @@
     @include breakpoint($desktop-s) {
         width: 272px;
         height: 48px;
-        // padding: 13px 32px;
     }
 
     @include breakpoint($tablet) {
         font-size: 16px;
         line-height: 20px;
-        // padding: 14px 44px;
     }
 }

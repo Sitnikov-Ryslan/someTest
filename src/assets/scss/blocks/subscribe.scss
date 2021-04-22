@@ -14,7 +14,7 @@
 }
 
 .subscribe__title {
-    font-weight: bold;
+    @extend %roboto-bold;
     font-size: 40px;
     line-height: 52px;
     margin-bottom: 7px;
@@ -33,7 +33,7 @@
 }
 
 .subscribe__text {
-    font-weight: normal;
+    @extend %roboto-regular;
     font-size: 20px;
     line-height: 36px;
     margin-bottom: 37px;
@@ -89,7 +89,7 @@
 
     & b {
         display: block;
-        font-weight: bold;
+        @extend %roboto-bold;
         font-size: 18px;
         line-height: 24px;
         color: $dark-grey;
@@ -97,11 +97,11 @@
         top: 16px;
         left: 24px;
         opacity: 0;
-        transition: transform .4s linear, opacity .2s linear;
+        transition: transform 0.4s linear, opacity 0.2s linear;
         transform: translateX(-150%);
 
         &:last-of-type {
-            font-weight: normal;
+            @extend %roboto-regular;
             font-size: 16px;
             line-height: 24px;
             top: 0;
@@ -131,8 +131,7 @@
     border: 0;
     margin: 0;
     padding: 25px 0 0 24px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    @extend %roboto-bold;
     font-size: 18px;
     line-height: 24px;
     color: $dark-grey;
@@ -206,7 +205,7 @@
     position: absolute;
     top: 12px;
     right: 16px;
-    background: url('../images/subscribe-submit.svg') no-repeat center center;
+    background: url("../images/subscribe-submit.svg") no-repeat center center;
     cursor: pointer;
 
     @include breakpoint($desktop-s) {
